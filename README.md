@@ -16,15 +16,15 @@ Furthermore, the following constraints are present, aimed at keeping a healthy b
 From these constraints, it is quite easy to set up a mathematical framework to solve for the amount of the budget that should be allocated to TV (denoted x<sub>1</sub>), Print (denoted x<sub>2</sub>), and Radio (denoted x<sub>3</sub>).
 
 ### LP Framework
-We define our objective to maximize the ROI for the marketing campaign as follows:
-<p style="text-align:center"> max 0.25x<sub>1</sub> + 0.18x<sub>2</sub> + 0.10x<sub>3</sub></p> 
-Subject to the following constraints:
-x<sub>1</sub> + x<sub>2</sub> + x<sub>3</sub> <= 500,000    *The maximum budget is $500,000*
-x<sub>1</sub> <= 0.55 * (x<sub>1</sub> + x<sub>2</sub> + x<sub>3</sub>)    *TV budget must be no more than 55% of the total*
-x<sub>1</sub> >= 0.45 * (x<sub>1</sub> + x<sub>2</sub> + x<sub>3</sub>)    *TV budget must be at least 45% of the total*
-x<sub>2</sub> >= 50,000    *Print budget must be at least $50,000*
-x<sub>3</sub> >= 25,000    *Radio budget must be at least $25,000*
-29.41x<sub>1</sub> + 40.0x<sub>2</sub> + 62.50x<sub>3</sub> >= 15,000,000    *The campaign must deliver at least 15M impressions*
+We define our objective to maximize the ROI for the marketing campaign as follows:--
+<p style="text-align:center"> max 0.25x<sub>1</sub> + 0.18x<sub>2</sub> + 0.10x<sub>3</sub></p> --
+Subject to the following constraints:--
+x<sub>1</sub> + x<sub>2</sub> + x<sub>3</sub> <= 500,000    *The maximum budget is $500,000*--
+x<sub>1</sub> <= 0.55 * (x<sub>1</sub> + x<sub>2</sub> + x<sub>3</sub>)    *TV budget must be no more than 55% of the total*--
+x<sub>1</sub> >= 0.45 * (x<sub>1</sub> + x<sub>2</sub> + x<sub>3</sub>)    *TV budget must be at least 45% of the total*--
+x<sub>2</sub> >= 50,000    *Print budget must be at least $50,000*--
+x<sub>3</sub> >= 25,000    *Radio budget must be at least $25,000*--
+29.41x<sub>1</sub> + 40.0x<sub>2</sub> + 62.50x<sub>3</sub> >= 15,000,000    *The campaign must deliver at least 15M impressions*--
 
 ### Solving the LP
 The above constraints can be input into a Python script and solved using the pymodo package.  Annotated code is available in the marketing_budget_problem.ipynb file.
