@@ -30,10 +30,11 @@ x<sub>3</sub> >= 25,000 ----------------- "Radio budget must be at least $25,000
 29.41x<sub>1</sub> + 40.0x<sub>2</sub> + 62.50x<sub>3</sub> >= 15,000,000 ----------------- "The campaign must deliver at least 15M impressions"<br />
 
 ### Solving the LP
-The above constraints can be input into a Python script and solved using the pymodo package.  Annotated code is available in the marketing_budget_problem.ipynb file.
+The above constraints can be input into a Python script and solved using the pyomo package.  Annotated code is available in the marketing_budget_problem.ipynb file.
 
 ### Conclusions
 From the Python script, we have determined the following optimal solution:
+
 **Optimal Variable Values:**
 * TV Budget x<sub>1</sub> = 
 * Print Budget x<sub>2</sub> = 
