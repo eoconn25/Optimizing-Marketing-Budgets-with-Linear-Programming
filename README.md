@@ -36,15 +36,19 @@ The above constraints can be input into a Python script and solved using the pyo
 From the Python script, we have determined the following optimal solution:
 
 **Optimal Variable Values:**
-* TV Budget x<sub>1</sub> = 
-* Print Budget x<sub>2</sub> = 
-* Radio Budget x<sub>3</sub> = <br />
+* TV Budget x<sub>1</sub> = $275,000
+* Print Budget x<sub>2</sub> = $200,000
+* Radio Budget x<sub>3</sub> = 25,000<br />
 
 **Optimized Objective:**
-* Total cost:
-* Total impressions:
-* **Total ROI:  **
+* Total cost: $500,000 (all of the budget)
+* Total impressions: 17,650,250 (exceeding the goal of 15M)
+* **Total ROI: $107,250**
 
-Thus, from the LP frameworked described, we have found the optimal distribution of the marketing budget across three channels: TV, Print, and Radio.  This will allow our marketing campaign to maximize ROI within the designated constraints and parameters.--
-Although applied to a small, niche application in this example, the linear programming framework can be applied to any set of problems with defined objectives and constraints.  From supply chain opimization to workforce scheduling, this is an extremely powerful mathematical tool for optimizing real-world systems.
+To double check - does this solution make sense?  TV has the highest possibel ROI at ~30%, so the model elected to dedicate the maximum 55% of the $0.5M budget to TV marketing.  With the remaining budget, we could either invest in Print or Radio.  Print media has the better ROI-to-Impressions ratio (0.0045 ROI-to-Impression vs. Radio's 0.0016), so as much of the remaining budget as possible was dedicated to Print.  Finally, since Radio has the poorest ROI and a lower ROI-to-Impression ratio, it is kept at the minimum value within the constraints, only $25,000.  From the parameters we outlined above, the model's solution makes good, logical sense.  
 
+Note: this is actually a better solution than the one outlined in the RPubs example; this is likely because Python's pyomo package with glpk solver follows a different algorithm than R's lpsolve.  For this particular problem, the Python solver was able to locate a superior maxima, highlighting the importance of using multiple tools and methods to determine the best business outcome.
+
+Thus, from the LP frameworked described, we have found the optimal distribution of the marketing budget across three channels: TV, Print, and Radio.  This will allow our marketing campaign to maximize ROI within the designated constraints and parameters.  Although applied to a small, niche application in this example, the linear programming framework can be applied to any set of problems with defined objectives and constraints.  From supply chain opimization to workforce scheduling, this is an extremely powerful mathematical tool for optimizing real-world systems.
+
+* Project completed September 2025 *
