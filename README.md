@@ -51,4 +51,4 @@ Note: this is actually a better solution than the one outlined in the RPubs exam
 
 Thus, from the LP frameworked described, we have found the optimal distribution of the marketing budget across three channels: TV, Print, and Radio.  This will allow our marketing campaign to maximize ROI within the designated constraints and parameters.  Although applied to a small, niche application in this example, the linear programming framework can be applied to any set of problems with defined objectives and constraints.  From supply chain opimization to workforce scheduling, this is an extremely powerful mathematical tool for optimizing real-world systems.
 
-* Project completed September 2025 *
+*Project completed September 2025*
